@@ -1,20 +1,13 @@
 import { createSlice, PayloadAction  } from "@reduxjs/toolkit";
 import { THEME_DATA } from "../themeData";
-
-export interface Theme {
-  themeName: string;
-  bgColor: string;
-  headerColor: string;
-  primaryText: string;
-}
+import { Theme } from "../themes/themeTypes";
 
 interface ThemeState {
   theme: Theme;
 }
 
-// Default theme
 const initialState: ThemeState = {
-  theme: THEME_DATA[0], // Default to Light Theme
+  theme: THEME_DATA[0], 
 };
 
 const themeSlice = createSlice({
