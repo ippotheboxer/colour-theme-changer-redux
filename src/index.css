@@ -1,6 +1,57 @@
 @import "tailwindcss";
 
 :root {
-  --primary-bg: white;
-  --primary-text: black;
+  --primary-bg: #fafafa;
+  --header-color: #e4e5f1;
+  --primary-text: #484b6a;
+  --box-shadow: 0px 5px 10px 0px grey;
+}
+
+.light {
+  --primary-bg: #fafafa;
+  --header-color: #e4e5f1;
+  --primary-text: #484b6a;
+  --box-shadow: 0px 5px 10px 0px grey;
+}
+
+.dark {
+  --primary-bg: black;
+  --header-color: grey;
+  --primary-text: white;
+  --box-shadow: 0px 5px 10px 0px grey;
+}
+
+.pastel-pink {
+  --primary-bg: #f9f5f6;
+  --header-color: #fdcedf;
+  --primary-text: #f2bed1;
+  --box-shadow: 0px 5px 10px 0px #f2bed1;
+}
+
+.pastel-lilac {
+  --primary-bg: #ffe1ff;
+  --header-color: #e4b1f0;
+  --primary-text: #433878;
+  --box-shadow: 0px 5px 10px 0px #e4b1f0;
+}
+
+.dark-purple {
+  --primary-bg: #2d033b;
+  --header-color: #810ca8;
+  --primary-text: #e5b8f4;
+  --box-shadow: 0px 5px 10px 0px #810ca8;
+}
+
+/* Apply variables to elements */
+body {
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+}
+
+.shadow {
+  box-shadow: var(--box-shadow);
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
 }
