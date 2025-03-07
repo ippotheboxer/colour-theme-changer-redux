@@ -14,16 +14,16 @@ const App: React.FC = () => {
     <main className="min-h-screen flex flex-col">
       <Header />
       <div className="p-8">
-        <h1 className="text-3xl font-semibold pb-4 heading-text">Choose Your Theme</h1>
-        <p>Currently, you  have {theme} theme chosen.</p>
+        <h1 className="text-3xl font-semibold pb-4 heading-text headerBorder">Choose Your Theme</h1>
+        <p className="pt-4">Currently, you  have <strong>{theme}</strong> theme chosen.</p>
 
         {/* Category Selection */}
-        <div className="flex flex-row items-center gaps-4 mt-4">
-          <span>Toggle theme:</span>
+        <div className="flex flex-row items-center gaps-4 mt-4 pb-4">
+          <span className="font-semibold mr-4">Toggle theme:</span>
           {THEME_CATEGORIES.map((category) => (
             <button
               key={category}
-              className="p-2 px-4 rounded-md shadow hover:cursor-pointer"
+              className={`${category === selectedCategory ? "activeButton filterThemeBtn" : "filterThemeBtn"}`}
               onClick={() => setSelectedCategory(category)}
             >
               {category.replace("-", " ")}
